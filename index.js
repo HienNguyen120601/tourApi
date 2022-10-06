@@ -1,10 +1,10 @@
 const express = require('express')
 const winston = require('winston')
-const cors = require('cors')
+
 const app = express()
 const mongoose = require('mongoose')
 const morgan = require('morgan')
-var bodyParser = require('body-parser')
+
 
 
 
