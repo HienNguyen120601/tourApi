@@ -39,7 +39,7 @@ app.get('/author', async (req, res) => {
     res.send(author)
 
 })
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 9001
 app.listen(PORT, () => {
     console.log('Sever is running....', PORT)
 })
