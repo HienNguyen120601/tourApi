@@ -1,4 +1,5 @@
 const express = require('express')
+const router = require('./router/router')
 const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
@@ -11,34 +12,7 @@ mongoose.connect("mongodb+srv://c2star07:hiennguyen123@cluster0.lo0jufq.mongodb.
     console.log("Success connect mongodb")
 })
 
-const authorSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: String,
-        required: true
-    },
-    book:
-        [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "Book"
-            }
-        ]
-})
-let Author = mongoose.model("Author", authorSchema)
-app.get('/', (req, res) => {
-    res.send("hello")
-})
-app.get('/author', async (req, res) => {
-
-    const author = await Author.find({})
-
-    res.send(author)
-
-})
+app.use("/router/router", router)
 const PORT = process.env.PORT || 9001
 app.listen(PORT, () => {
     console.log('Sever is running....', PORT)
