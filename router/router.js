@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 
     const author = await Author.find({})
 
-    res.send(author)
+    res.send('Hello')
 
 })
 module.exports = router
