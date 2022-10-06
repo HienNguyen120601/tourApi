@@ -5,10 +5,9 @@
   "main": "index.js",
   "engines": {
     "node": "14.x"
-    
   },
   "scripts": {
-    "start":"nodemon --inspect index.js",
+    "start": "nodemon --inspect index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +26,7 @@
     "express": "^4.18.1",
     "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "yup": "^0.32.11"
   }
- 
 }
