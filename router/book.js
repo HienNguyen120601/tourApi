@@ -31,6 +31,7 @@ router.get("/", (req, res) => {
     Book.find().then((book) => res.send(book)).catch((err) => {
         res.status(500).send("Err")
     })
+    res.setHeader('Access-Control-Allow-Origin', '*');
 })
 
 //GET by ID
